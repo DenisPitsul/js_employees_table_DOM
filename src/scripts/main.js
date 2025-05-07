@@ -183,7 +183,7 @@ newEmployeeForm.addEventListener('submit', (e) => {
 
   const notifications = [];
 
-  if (!position || !office || !salary) {
+  if (!userName || !position || !office || !age || !salary) {
     notifications.push({
       title: 'Missing data',
       description: 'All fields are required.',
@@ -329,7 +329,7 @@ tableElement.addEventListener('dblclick', (e) => {
     if (headerText === 'Position' && newValue === '') {
       notifications.push({
         title: 'Invalid position',
-        description: 'Position should have at least 1 letters.',
+        description: 'Position should have at least 1 letter.',
       });
     }
 
@@ -344,8 +344,8 @@ tableElement.addEventListener('dblclick', (e) => {
 
     if (headerText === 'Office' && !cities.includes(newValue)) {
       notifications.push({
-        title: 'Invalid position',
-        description: 'Position should have at least 1 letters.',
+        title: 'Invalid office',
+        description: 'Office should be one of the predefined cities.',
       });
     }
 
